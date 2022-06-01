@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background-color: cadetblue;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.leftCounter {
+    display: flex;
+    flex-direction: column;
+    height: 290px;
+    width: 400px;
+    background-color: aqua;
+    border: 3px solid rebeccapurple;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rightCounter {
+    display: flex;
+    flex-direction: column;
+    height: 290px;
+    width: 400px;
+    background-color: palevioletred;
+    border: 3px solid rebeccapurple;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tuner {
+    margin-bottom: 20px;
+    border: 3px solid rebeccapurple;
+    border-radius: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.setBTN {
+    border: 3px solid rebeccapurple;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quantity {
+    font-size: 40px;
+    margin-bottom: 20px;
+    border: 3px solid rebeccapurple;
+    border-radius: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counterBTNS {
+    border: 3px solid rebeccapurple;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+
+.leftBTN {
+    font-size: 23px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: yellow;
+    border: 3px solid rebeccapurple;
+}
+
+.incRightBTN {
+    font-size: 23px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: yellow;
+    border: 3px solid rebeccapurple;
+}
+
+.resetRightBTN {
+    margin-left: 60px;
+    font-size: 23px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: yellow;
+    border: 3px solid rebeccapurple;
 }
