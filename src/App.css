@@ -55,7 +55,6 @@
 }
 
 .quantity {
-    font-size: 40px;
     margin-bottom: 20px;
     border: 3px solid rebeccapurple;
     border-radius: 20px;
@@ -101,4 +100,64 @@
     border-radius: 20px;
     background-color: yellow;
     border: 3px solid rebeccapurple;
+}
+
+.number {
+    color: black;
+    font-size: 40px;
+}
+
+.numberLast {
+    color: red;
+    font-size: 40px;
+}
+
+.maxValueInput {
+    width: 40px;
+    height: 25px;
+    background-color: lawngreen;
+    border: 3px solid rebeccapurple;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.startValueInput {
+    width: 40px;
+    height: 25px;
+    background-color: lawngreen;
+    border: 3px solid rebeccapurple;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.startValueText {
+    font-size: 30px;
+    padding-right: 30px;
+}
+
+.maxValueText {
+    font-size: 30px;
+    padding-right: 30px;
+}
+
+.errorStartValueInput {
+    width: 40px;
+    height: 25px;
+    background-color: red;
+    border: 3px solid firebrick;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.stringStyle {
+    color: black;
+    font-size: 22px;
+}
+
+.errorString {
+    color: red;
+    font-size: 22px;
 }
