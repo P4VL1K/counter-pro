@@ -6,7 +6,7 @@ type UniInputPropsType = {
     value: number
     onChangeHandle: (e: ChangeEvent<HTMLInputElement>) => void
     type: string
-    className: any
+    className: string
 }
 
 export function UniInput(props: UniInputPropsType) {

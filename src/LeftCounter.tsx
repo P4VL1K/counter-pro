@@ -15,6 +15,9 @@ type LeftCounterPropsType = {
 
 export function LeftCounter(props: LeftCounterPropsType) {
 
+    const startValueInputClassName = (props.startValue < 0) ? 'errorStartValueInput' : ((props.startValue >= props.maxValue) ? 'errorStartValueInput' : 'startValueInput')
+
+    const maxValueInputClassName = (props.startValue >= props.maxValue) ? 'errorStartValueInput' : 'maxValueInput'
 
     const onChangeStartInputValue = (e: ChangeEvent<HTMLInputElement>) => {
         let setterStartValue = Number(e.currentTarget.value)
@@ -62,12 +65,7 @@ export function LeftCounter(props: LeftCounterPropsType) {
                         value={props.maxValue}
                         onChangeHandle={onChangeMaxInputValue}
                         type={"number"}
-                        className={(props.startValue >= props.maxValue) ? 'errorStartValueInput' : 'maxValueInput'}/>
-                    {/*<input*/}
-                    {/*    value={props.maxValue}*/}
-                    {/*    type="number"*/}
-                    {/*    className={(props.startValue >= props.maxValue) ? 'errorStartValueInput' : 'maxValueInput'}*/}
-                    {/*    onChange={onChangeMaxInputValue}/>*/}
+                        className={maxValueInputClassName}/>
                 </div>
                 <div>
                     <b className='startValueText'>start value:</b>
@@ -75,12 +73,7 @@ export function LeftCounter(props: LeftCounterPropsType) {
                         value={props.startValue}
                         onChangeHandle={onChangeStartInputValue}
                         type={'number'}
-                        className={(props.startValue < 0) ? 'errorStartValueInput' : ((props.startValue >= props.maxValue) ? 'errorStartValueInput' : 'startValueInput')}/>
-                    {/*<input*/}
-                    {/*    value={props.startValue}*/}
-                    {/*    onChange={onChangeStartInputValue}*/}
-                    {/*    type="number"*/}
-                    {/*    className={(props.startValue < 0) ? 'errorStartValueInput' : ((props.startValue >= props.maxValue) ? 'errorStartValueInput' : 'startValueInput')}/>*/}
+                        className={startValueInputClassName}/>
                 </div>
             </div>
             <div className='setBTN'>
