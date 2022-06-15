@@ -1,5 +1,6 @@
 import React, {Dispatch, SetStateAction} from "react";
 import './App.css';
+import {UniButton} from "./UniButton";
 
 
 type RightCounterPropsType = {
@@ -32,18 +33,17 @@ export function RightCounter(props: RightCounterPropsType) {
                 <b className={checkTypeOf}>{props.value}</b>
             </div>
             <div className='counterBTNS'>
-                <button
-                    className='incRightBTN'
-                    onClick={onClickIncHandler}
+                <UniButton
+                    name={"inc"}
+                    onCLickHandle={onClickIncHandler}
                     disabled={props.value === props.maxValue}
-                >inc
-                </button>
-                <button
-                    className='resetRightBTN'
-                    onClick={onClickResetHandler}
+                    className={'incRightBTN'}/>
+                <UniButton
+                    name={'reset'}
+                    onCLickHandle={onClickResetHandler}
                     disabled={props.value === props.startValue}
-                >reset
-                </button>
+                    className={'resetRightBTN'}/>
+
             </div>
         </div>
     )
