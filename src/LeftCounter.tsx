@@ -3,14 +3,17 @@ import './App.css';
 import {UniButton} from "./UniButton";
 import {UniInput} from "./UniInput";
 
-
 type LeftCounterPropsType = {
     value: number
-    setValue: any //(value: number | string) =>void
+    setValue: (value: number) =>void
     startValue: number
     setStartValue: (startValue: number) => void
     maxValue: number
     setMaxValue: (maxValue: number) => void
+    message: string
+    setMessage: (message: string) => void
+    setting: (meaning: boolean) => void
+    disable: (dis: boolean) => void
 }
 
 export function LeftCounter(props: LeftCounterPropsType) {
@@ -23,11 +26,15 @@ export function LeftCounter(props: LeftCounterPropsType) {
         let setterStartValue = Number(e.currentTarget.value)
         props.setStartValue(setterStartValue)
         let conditionStart = (setterStartValue < 0 || setterStartValue >= props.maxValue) ? 'incorrect value' : 'enter values and press "set"'
-        props.setValue(conditionStart)
+        props.setMessage(conditionStart)
+        props.setting(false)
+        props.disable(true)
     }
 
     const setBTNClickHandler = () => {
         props.setValue(props.startValue)
+        props.setting(true)
+        props.disable(false)
     }
 
     useEffect(() => {
@@ -53,7 +60,9 @@ export function LeftCounter(props: LeftCounterPropsType) {
         let setterMaxValue = Number(e.currentTarget.value)
         props.setMaxValue(setterMaxValue)
         let conditionMax = (setterMaxValue <= props.startValue) ? 'incorrect value' : 'enter values and press "set"'
-        props.setValue(conditionMax)
+        props.setMessage(conditionMax)
+        props.setting(false)
+        props.disable(true)
     }
 
     return (
